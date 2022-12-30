@@ -29,7 +29,6 @@ export class ArticleController {
     @User('id') currentUserId: number,
     @Query() query: any,
   ): Promise<ArticlesResponseInterface> {
-    console.log('as');
     return await this.articleService.findAll(currentUserId, query);
   }
   @Post()
